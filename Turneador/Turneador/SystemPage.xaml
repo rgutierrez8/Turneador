@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Turneador.SystemPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Solicitar Turno" Clicked="Item_click" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+        <BoxView Color="Gray" Opacity="0.8" />
+        <Grid Style="{StaticResource grid-contenedor}">
+            <StackLayout>
+                <Label x:Name="welcomeLabel" Text="" Style="{StaticResource labelTitle}" />
+                <ListView x:Name="turnListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding SelectedDate}" Detail="{Binding Process}" TextColor="#FF7600" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label x:Name="infoLabel" HorizontalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

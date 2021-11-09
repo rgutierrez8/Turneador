@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Turneador.NewUserPage">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+        <BoxView Color="Gray" Opacity="0.8" />
+        <Grid Style="{StaticResource grid-contenedor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="1">
+                <Entry x:Name="newNameEntry" Placeholder="Nombre" />
+                <Entry x:Name="newLastNameEntry" Placeholder="Apellido" />
+                <Entry x:Name="newDniEntry" Keyboard="Numeric" Placeholder="DNI"/>
+                <Entry x:Name="newEmailEntry" Keyboard="Email" Placeholder="Email" />
+                <Entry x:Name="newPhoneEntry" Keyboard="Telephone" Placeholder="Teléfono" />
+                <Entry x:Name="newUserEntry" Placeholder="Usuario" />
+                <Entry x:Name="newPassEntry" Placeholder="Password" IsPassword="True" />
+                <Entry x:Name="newPassRepeatEntry" Placeholder="Password" IsPassword="True" />
+                <Button Text="registrarse" Clicked="Button_click" Style="{StaticResource btn-continue}"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

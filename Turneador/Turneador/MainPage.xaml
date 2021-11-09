@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Turneador.MainPage">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+        <BoxView Color="white" Opacity="0.2" />
+
+        <Grid Style="{StaticResource grid-contenedor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="1">
+                <Entry x:Name="userEntry" Placeholder="Usuario" />
+                <Entry x:Name="passEntry" Placeholder="Password" IsPassword="True" />
+                <Button x:Name="btnSingIn" Text="ingresar" Clicked="ButtonSingIn_click" Style="{StaticResource btn-continue}" />
+                <Button Text="Nuevo Usuario" Clicked="ButtonNew_click" Style="{StaticResource btn-continue}" />
+            </StackLayout>
+        </Grid>
+        
+    </Grid>
+
+</ContentPage>

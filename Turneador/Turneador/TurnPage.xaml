@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Turneador.TurnPage">
+
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" />
+        <BoxView Color="Gray" Opacity="0.8" />
+        <Grid Style="{StaticResource grid-contenedor}">
+            <StackLayout>
+                <Label x:Name="nameTurnLabel" Text="Nombre"/>
+                <Label x:Name="dniTurnLabel" Text="DNI" />
+                <Label x:Name="emailTurnLabel" Text="Email"/>
+                <DatePicker x:Name="dateTurnEntry" Format="D" />
+                <TimePicker x:Name="hourTurnEntry" Format="HH.MM" />
+                <Picker x:Name="tramitTurnEntry" Title="Seleccionar tramite"/>
+                <Button Text="solicitar" Style="{StaticResource btn-continue}" Clicked="GetTurn_click" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
