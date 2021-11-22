@@ -62,11 +62,14 @@ namespace Turneador
                         if (passSelected == passEntry.Text)
                         {
                             var loggedUser = new User { 
+                                Id = userSelected[0].Id,
                                 Name = userSelected[0].Name,
                                 LastName = userSelected[0].LastName,
                                 Dni = userSelected[0].Dni,
                                 Email = userSelected[0].Email,
-                                Telephone = userSelected[0].Telephone
+                                Telephone = userSelected[0].Telephone,
+                                Username = userSelected[0].Username,
+                                Password = userSelected[0].Password
                             };
                             Navigation.PushAsync(new SystemPage(loggedUser));
                         }

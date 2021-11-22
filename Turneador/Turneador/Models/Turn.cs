@@ -8,6 +8,8 @@ namespace Turneador.Models
 {
     public class Turn
     {
+        [PrimaryKey]
+        [AutoIncrement]
         public int Id { get; set; }
         public String SelectedDate { get; set; }
         public String Process { get; set; }
