@@ -15,7 +15,7 @@
                 <ListView x:Name="turnListView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding SelectedDate}" Detail="{Binding Process}" TextColor="#FF7600" />
+                            <TextCell Text="{Binding Process}" Detail="{Binding LabelState }" TextColor="#FF7600" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

@@ -13,6 +13,8 @@ namespace Turneador.Models
         public int Id { get; set; }
         public String SelectedDate { get; set; }
         public String Process { get; set; }
+        public int State { get; set; }
+        public string LabelState { get; set; }
 
         [ForeignKey(typeof(User))]
         public int UserId { get; set; }
